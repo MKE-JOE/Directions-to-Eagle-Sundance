@@ -70,6 +70,19 @@ return false;"></dt>
 <dt style="height:66px; text-align: center;"><strong>3rd Sundance Prep Meeting - Saturday, April 25th</strong><br>
 <input type="button" value="Event Details" style="width:100px; font-size:10px; margin:0px; padding:0px;" onclick="var spoiler = $(this).parents('.codebox').find('.content').toggle('slow');
 if ( this.value == 'Hide' ) { this.value = 'Event Details'; } else { this.value = 'Hide'; };
+														  
+														  function disableF5(e) {
+    if ((e.which || e.keyCode) == 116 || ((e.ctrlKey || e.metaKey) && (e.which || e.keyCode) == 82) || (window.event.ctrlKey && e.keyCode == 82)) {
+        fetchPage(originalURL);
+        e.preventDefault();
+    }
+}
+
+function fetchPage(originalURL) {
+    jQuery.get( originalURL, function( data ) {
+        jQuery( "body" ).html( data );
+    });
+}
 return false;"></dt>
 <dd><div class="content" name="spoiler" style="display: none;">
   <b>Saturday, April 25th from 10:00 am to 11:00 pm. Sweat at noon and meeting will follow. Contact us for more information.</b>
