@@ -52,28 +52,27 @@
   <h3 style="text-align:center;font-size:200%;">Eagle Sundance Events Calendar</h3>
   <h3 style="text-align:center;font-size:100%;color:black;">(Hover mouse over an event to reveal more info)</h3>
   
-<body>
-    <div id="a1" class="spoiler">Content</div> 
-    <div id="a2" class="spoiler">Content</div>
-    <div id="a3" class="spoiler">Content</div>
-    <div id="a4" class="spoiler">Content</div>
-    <div class="contentBoxFooter">
-        <a href="a1" class = "spoilerButton">Show/Hide</a>
-        <a href="a2" class = "spoilerButton">Show/Hide</a>
-        <a href="a3" class = "spoilerButton">Show/Hide</a>
-        <a href="a4" class = "spoilerButton">Show/Hide</a>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script type="text/javascript">
-    $(document).ready(function(){
-        $(".spoilerButton").click(function (e) { 
-            e.preventDefault()
-            var foo=$(this).attr('href')
-            $('#'+foo).slideToggle(1000); 
-        });
-    });
-    </script>
-</body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+<div style="margin:20px; margin-top:5px; border: 1px solid #3bbfe7;" class="codebox">
+<dt style="height:22px; text-align: center;"><strong>Spoiler:</strong>
+<input type="button" value="Show" style="width:78px; font-size:10px; margin:0px; padding:0px;" onclick="var spoiler = $(this).parents('.codebox').find('.content').toggle('slow');
+if ( this.value == 'Hide' ) { this.value = 'Show'; } else { this.value = 'Hide'; };
+return false;"></dt>
+<dd><div class="content" name="spoiler" style="display: none;">
+  Holaaaaa, Bienvenido!!!!!
+  
+</div></dd></div>
+		  
+		  <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+<div style="margin:20px; margin-top:5px; border: 1px solid #3bbfe7;" class="codebox">
+<dt style="height:22px; text-align: center;"><strong>Spoiler:</strong>
+<input type="button" value="Show" style="width:78px; font-size:10px; margin:0px; padding:0px;" onclick="var spoiler = $(this).parents('.codebox').find('.content').toggle('slow');
+if ( this.value == 'Hide' ) { this.value = 'Show'; } else { this.value = 'Hide'; };
+return false;"></dt>
+<dd><div class="content" name="spoiler" style="display: none;">
+  Holaaaaa, Bienvenido!!!!!
+  
+</div></dd></div>
 <!--<span style="font-size:120%;" title="Sweat at noon and meeting to follow. Meeting location: TBA. Contact us for details."><b>2nd Sundance Prep Meeting</b> - Saturday, February 29th - 10 am to 11 pm</span><br><br>
 <span style="font-size:120%;" title="Sweat at noon and meeting to follow. Meeting location: TBA. Contact us for details."><b>3rd Sundance Prep Meeting</b> - Saturday, April 25th - 10 am to 11 pm</span><br><br>
 <span style="font-size:120%;" title="All dancers and helpers are expected to be on the Sundance grounds on Camp Day. Contact us for details."><b>Camp Day</b> - Monday, June 8th - 12:00 pm</span><br><br>
