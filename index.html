@@ -9,6 +9,21 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="HandheldFriendly" content="true">
+	 
+	 <SCRIPT language=JavaScript>
+
+<!-- http://www.spacegun.co.uk -->
+
+var message = "function disabled";
+
+function rtclickcheck(keyp){ if (navigator.appName == "Netscape" && keyp.which == 3){ alert(message); return false; }
+
+if (navigator.appVersion.indexOf("MSIE") != -1 && event.button == 2) { alert(message); return false; } }
+
+document.onmousedown = rtclickcheck;
+
+</SCRIPT>
+	 
   </head>
   <body>
 	<b><marquee style="font-size:120%">Boozhoo, relatives!</marquee></b><br>
