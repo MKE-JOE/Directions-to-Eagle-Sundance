@@ -12,7 +12,7 @@
     <meta name="robots" content="noindex">
     <!--<link rel="stylesheet" type="text/css" href="styles.css">-->
 	<style>
-img.sticky {
+img.sticky:hover {
   position: sticky;
   -webkit-position: sticky;
   -moz-position: sticky;
@@ -21,12 +21,14 @@ img.sticky {
   top: 0;
   display: block;
   width: 120px;
-}
-		
-img:hover {
   animation: shake 0.5s;
   animation-iteration-count: infinite;
 }
+		
+/*img:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}*/
 		
 @keyframes shake {
   0% { transform: translate(1px, 1px) rotate(0deg); }
