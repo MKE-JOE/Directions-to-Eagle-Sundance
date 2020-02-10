@@ -12,19 +12,18 @@
     <meta name="robots" content="noindex">
     <!--<link rel="stylesheet" type="text/css" href="styles.css">-->
 	<style>
-.sticky {
+img.sticky {
    position: sticky;
   -webkit-position: sticky;
   -moz-position: sticky;
   -o-position: sticky;
   -ms-position: sticky;
   top: 0;
-  float: right;
   display: block;
   width: 120px;
 }
 		
-.sticky:hover {
+img.sticky:hover {
   animation: shake 0.5s;
   animation-iteration-count: infinite;
 }
@@ -94,10 +93,10 @@
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
 	  </script>
 	  
-	<div class="sticky">  
+	  
 <a href="contactbox.html" onclick="window.open(this.href,'child','width=600,height=500,status=no,directories=no,menubar=no,toolbar=no,scrollbars=no,location=no,resizable=no,titlebar=no'); return false">
-	<img src="SD.logo.speech.png" alt="SD" width="120px" height="120px"></a>
-	  </div>
+	<img class="sticky" src="SD.logo.speech.png" alt="SD" width="120px" height="120px"></a>
+	 
 	  
 	  <div style="background-color:lightblue;color:darkblue;padding:20px;width:900;">
   <h3 style="text-align:center;font-size:200%;">Eagle Sundance Events Calendar</h3>
