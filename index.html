@@ -12,7 +12,7 @@
     <meta name="robots" content="noindex">
     <!--<link rel="stylesheet" type="text/css" href="styles.css">-->
 	<style>
-img.sticky:hover {
+img.sticky {
   position: sticky;
   -webkit-position: sticky;
   -moz-position: sticky;
@@ -21,14 +21,12 @@ img.sticky:hover {
   top: 0;
   display: block;
   width: 120px;
+}
+		
+img:hover {
   animation: shake 0.5s;
   animation-iteration-count: infinite;
 }
-		
-/*img:hover {
-  animation: shake 0.5s;
-  animation-iteration-count: infinite;
-}*/
 		
 @keyframes shake {
   0% { transform: translate(1px, 1px) rotate(0deg); }
@@ -96,7 +94,7 @@ img.sticky:hover {
 	  </script>
 	  
 <a href="contactbox.html" onclick="window.open(this.href,'child','width=600,height=500,status=no,directories=no,menubar=no,toolbar=no,scrollbars=no,location=no,resizable=no,titlebar=no'); return false">
-	<img class="sticky" src="SD.logo.speech.png" alt="SD" width="120px" height"120px" align="right"></a>
+	<img class="sticky" src="SD.logo.speech.png" alt="SD" align="right"></a>
 	  
 	  <div style="background-color:lightblue;color:darkblue;padding:20px;width:900;">
   <h3 style="text-align:center;font-size:200%;">Eagle Sundance Events Calendar</h3>
