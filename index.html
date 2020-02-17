@@ -58,6 +58,13 @@ img.sticky:hover {
 		<div style="font-size:10px; color: gray;">
 		Floral design: <a href="http://www.mnartists.org/beadingtraditions" target="_blank">Jessica Gokey</a>
 		</div>
+		
+		
+		<a href="www.google.com" id="hyper"></a>
+
+$("#hyper").click(function(){ 
+    $('body').fadeOut('slow',function(){$(this).remove();});
+});
 			
 		<!--contactbox starts-->
 <a href="contactbox.html" onclick="window.open(this.href,'child','width=600,height=500,status=no,directories=no,menubar=no,toolbar=no,scrollbars=no,location=no,resizable=no,titlebar=no'); return false">
