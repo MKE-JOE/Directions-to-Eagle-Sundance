@@ -43,6 +43,39 @@ img.sticky:hover {
   80% { transform: translate(-1px, -1px) rotate(1deg); }
   90% { transform: translate(1px, 2px) rotate(0deg); }
   100% { transform: translate(1px, -2px) rotate(-1deg); }
+	
+	
+	
+	$size: 100px;
+
+body {
+  margin: 0;
+}
+
+img, div {
+  width: $size;
+  height: $size;
+}
+
+.x {
+  animation: x 13s linear infinite alternate;
+}
+
+.y {
+  animation: y 7s linear infinite alternate;
+}
+
+@keyframes x {
+  100% {
+    transform: translateX( calc(100vw - #{$size}) );
+  }
+}
+
+@keyframes y {
+  100% {
+    transform: translateY( calc(100vh - #{$size}) );
+  }
+}
 				
 		</style> 
   </head>
@@ -370,6 +403,14 @@ window.replybox = {
 </script>
 <script src="https://cdn.getreplybox.com/js/embed.js"></script>
 <!--end replybox-->
+
+
+
+
+
+<div class="x">
+  <img class="y" src="https://blog.codepen.io/wp-content/uploads/2012/06/Button-Black-Large.png" alt="codepen" />
+</div>
 
 </body>
 		
