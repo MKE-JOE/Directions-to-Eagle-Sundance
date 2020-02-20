@@ -137,10 +137,10 @@ animation-delay: 2s;
     <body>
 	    
 	    <!--audio start-->
-	<iframe src="silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
+	<!--<iframe src="silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
 		<audio id="player" autoplay loop>
     <source src="cricket-sound2.wav" type="audio/wav">
-</audio>
+</audio>-->
 <!--audio end-->
 	    
 	    <div>
@@ -156,9 +156,17 @@ animation-delay: 2s;
 <div class="bg"></div>
 <div class="lightning flashit"></div>
 		
-		<div>
-		<h2 style="text-align:center; color:white;"><b>Login to Continue</b></h2>
+		<div style="text-align:center">
+		<audio id="audio" src="cricket-sound2.wav" loop></audio>
+<img id="img" src="login-button1.png" width=550 height=550 class="shake-slow shake-    
+constant">
+</center>
 		</div>
+<script>
+document.getElementById("img").addEventListener("click", function(){
+    document.getElementById("audio").play();
+});
+</script>
    
     </body>
 	
