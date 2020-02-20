@@ -14,15 +14,17 @@
     <meta name="googlebot" content="noindex, nofollow">
         <style type="text/css">
 		
-		body {
-		background-color: #000000;
-		width: 900px;
-		overflow: hidden;
-		}
+	html { 
+  background-color:#000000; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
             #div1
-            {float:left; width:20px; margin:10px;padding:10px;}
+            {float:left;}
 			#div2
-			{float:right; width:20px; margin:10px;padding:10px;}
+			{float:right;}
         </style>
     <script>
         function allowDrop(ev)
@@ -32,7 +34,7 @@
 
         function drag(ev)
         {
-            ev.dataTransfer.setData("Url","https://mke-joe.github.io/Directions-to-Eagle-Sundance/home.html");
+            ev.dataTransfer.setData("Url","home.html");
         }
 
         function drop(ev)
@@ -46,7 +48,5 @@
         <div id="div1">
          <img src="https://raw.githubusercontent.com/MKE-JOE/Directions-to-Eagle-Sundance/master/tobacco.png" draggable="true" ondragstart="drag(event)" id="drag1" width="400" height="250"></div>
         <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"><img src="https://raw.githubusercontent.com/MKE-JOE/Directions-to-Eagle-Sundance/master/hand2.png" width="500" height="300"></div>
-	    
-	    <script src="DragDropTouch.js"></script>
     </body>
 </html>
