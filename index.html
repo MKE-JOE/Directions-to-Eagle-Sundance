@@ -16,7 +16,7 @@
 	 
 	<style>
 		
-		/* make keyframes that tell the start state and the end state of our object */
+		/* Fade-in page - make keyframes that tell the start state and the end state of our object */
 @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
@@ -41,7 +41,8 @@
   -moz-animation-delay: 1s;
   animation-delay: 1s;
 }
-				
+		
+/*make object 'shake' on hover and 'sticky' on scroll */				
 img.sticky {
    position: sticky;
   -webkit-position: sticky;
@@ -113,7 +114,7 @@ img.sticky:hover {
    <input type="submit" value="Get Directions" />
 </form>
 	  
-<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><br>
+<!--invisible image for spacing--><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><br>
 	  
 <a href="https://www.facebook.com/groups/215617031827614/announcements/" onclick="window.open(this.href,'child','width=900,height=800,status=no,directories=no,menubar=no,toolbar=no,scrollbars=no,location=no,resizable=no,titlebar=no'); return false">
 <button title="Eagle Sundance Announcements" type="button">Get the latest Eagle Sundance info from our Facebook group</button></a><br>
@@ -132,7 +133,7 @@ img.sticky:hover {
 	  <button formaction="javascript:emailCurrentPage()"><b>Email this page to a friend</b></button>
 	  </form>
 	  
-								    							    
+<!--countdown starts-->								    							    
 <style>
 p {
   text-align: center;
@@ -173,10 +174,7 @@ var x = setInterval(function() {
   }
 }, 1000);
 </script>
-	  
-<!--countdown banner start
-<div data-type="countdown" data-id="1752430" class="tickcounter" style="width: 100%; position: relative; padding-bottom: 25%"><a href="//www.tickcounter.com/countdown/1752430/countdown-to-camp-day" title="Countdown to Camp Day">Countdown to Camp Day</a><a href="//www.tickcounter.com/" title="Countdown">Countdown</a></div><script>(function(d, s, id) { var js, pjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//www.tickcounter.com/static/js/loader.js"; pjs.parentNode.insertBefore(js, pjs); }(document, "script", "tickcounter-sdk"));</script>	
-<!--countdown banner end-->		
+<!--countdown ends-->		
 	  
 		<div>
 <a style="border: 2px solid; border-color: darkblue;" class="weatherwidget-io" href="https://forecast7.com/en/46d59n90d88/ashland/?unit=us" data-label_1="ASHLAND" data-label_2="WEATHER" data-theme="original" >ASHLAND WEATHER</a>
@@ -236,12 +234,7 @@ return false;"></dt>
 	  
 	  <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><br>
 	  
-<!--<span style="font-size:200;" title="Sweat at noon and meeting to follow. Meeting location: TBA. Contact us for details."><b>2nd Sundance Prep Meeting</b> - Saturday, February 29th - 10 am to 11 pm</span><br><br>
-<span style="font-size:200;" title="Sweat at noon and meeting to follow. Meeting location: TBA. Contact us for details."><b>3rd Sundance Prep Meeting</b> - Saturday, April 25th - 10 am to 11 pm</span><br><br>
-<span style="font-size:200;" title="All dancers and helpers are expected to be on the Sundance grounds on Camp Day. Contact us for details."><b>Camp Day</b> - Monday, June 8th - 12:00 pm</span><br><br>
-<span style="font-size:200;" title="Tree Day begins at 5:00 am on Thursday, June 11th. Contact us for details."><b>Eagle Sundance Ceremony</b> - Thursday, June 11th - 5:00 am through June 14th - 4:00 pm</span><br>
-</p>
-</div>-->
+<!--paypal donate button starts-->
 	  <style>
 	div.donate {
       text-size: 30px;
@@ -259,6 +252,7 @@ return false;"></dt>
 <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
 </form>
 	  </div>
+<!--paypal donate button ends-->
 		
 	  <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><br><br>
 	  
@@ -369,9 +363,9 @@ Curtis: <a href="tel:&#x31;&#x2d;&#x37;&#x31;&#x35;&#x2d;&#x38;&#x31;&#x33;&#x2d
 			  <b>News From Indian Country</b>
 		  </div>
 		  
-
+<!--rss commoninja feed-->
 <div style="border: 1px solid; border-color: gray; padding: .5px;" class="commonninja_component" comp-type="feed" comp-id="11c1c141-f3c5-4673-b105-41ec91ba2931"></div>			  
-		  
+<!--rss commoninja feed-->		  
 		  </p>
 
 	  </div>
@@ -381,7 +375,7 @@ Curtis: <a href="tel:&#x31;&#x2d;&#x37;&#x31;&#x35;&#x2d;&#x38;&#x31;&#x33;&#x2d
 		  
 <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><br>
 
-<!--start rss commoninja-->
+<!--start rss commoninja script-->
 <script type="text/javascript">
     (function() {
       var script = document.createElement('script');
@@ -390,7 +384,7 @@ Curtis: <a href="tel:&#x31;&#x2d;&#x37;&#x31;&#x35;&#x2d;&#x38;&#x31;&#x33;&#x2d
       document.getElementsByTagName('head')[0].appendChild(script);
     })();
   </script>
-<!--end rss commoninja-->
+<!--end rss commoninja script-->
 
 <!--start smooth scroll stuff-->
 <script src="jquery-3.4.1.min.js"></script>
