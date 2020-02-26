@@ -439,6 +439,14 @@ window.replybox = {
 -->
 
 <!--<script src="https://apis.google.com/js/platform.js" async defer></script>-->
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@beta/dist/js.cookie.min.js"></script>
+<script type="text/javascript">
+const cookieExists = Cookies.get('wf_auth_page');
+
+if (!cookieExists) {
+   window.location = "https://mke-joe.github.io/Directions-to-Eagle-Sundance/login.html";
+}
+</script>
 
 </body>
 		
