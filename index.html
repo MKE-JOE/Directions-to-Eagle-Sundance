@@ -29,6 +29,46 @@
   font-family: Arial, Helvetica, sans-serif;
 		}
 		
+		
+.x {
+  -webkit-animation: x 13s linear infinite alternate;
+          animation: x 13s linear infinite alternate;
+}
+
+.y {
+  -webkit-animation: y 7s linear infinite alternate;
+          animation: y 7s linear infinite alternate;
+}
+
+@-webkit-keyframes x {
+  100% {
+    -webkit-transform: translateX(calc(100vw - 100px));
+            transform: translateX(calc(100vw - 100px));
+  }
+}
+
+@keyframes x {
+  100% {
+    -webkit-transform: translateX(calc(100vw - 100px));
+            transform: translateX(calc(100vw - 100px));
+  }
+}
+@-webkit-keyframes y {
+  100% {
+    -webkit-transform: translateY(calc(100vh - 100px));
+            transform: translateY(calc(100vh - 100px));
+  }
+}
+@keyframes y {
+  100% {
+    -webkit-transform: translateY(calc(100vh - 100px));
+            transform: translateY(calc(100vh - 100px));
+  }		
+		
+		
+		
+		
+		
 		.dark-mode {
   background-color: #000000;
   color: gray;
@@ -113,6 +153,26 @@ img.sticky:hover {
 			  </header>
 		
 		<body oncontextmenu="return false">
+			
+			
+			
+			
+		<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+<div class="x">
+<img class="y" src="https://blog.codepen.io/wp-content/uploads/2012/06/Button-Black-Large.png" alt="codepen" />
+</div>	
+			
+			
+			
 	
 		<div style="font-size:10px; color: gray;">
 		Floral design: <a href="http://www.mnartists.org/beadingtraditions" target="_blank">Jessica Gokey</a>
