@@ -136,14 +136,32 @@ img.sticky:hover {
 	  
 <!--invisible image for spacing--><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><br>
 <div>	
-<button style="background-color:#ECEBEB; border-radius:4px;" onclick="myFunction()">🌓 Toggle Light/Dark Mode</button>
+<button type="button" class="btn btn-default btn-xs" style="background-color:#ECEBEB; border-radius:4px;" onclick="myFunction(); $('#imgname').toggle(); ">🌓 Toggle Light/Dark Mode</button>
 
 <script>
 function myFunction() {
    var element = document.body;
    element.classList.toggle("dark-mode");
 }
-</script>	
+</script>
+	
+	
+	
+<script>
+$(function(){
+   $("button").click(function(){
+       $("img").toggleClass("hidden");
+   });
+});
+</script>
+	
+	<div id="imgname">
+    <img class="img-responsive hidden" src="fire.gif" width="85px" height="125px">
+</div>
+	
+	
+	
+	
 	</div>	
 	<!--Facebook Group button starts	  
 <a href="https://www.facebook.com/groups/215617031827614/announcements/" onclick="window.open(this.href,'child','width=900,height=800,status=no,directories=no,menubar=no,toolbar=no,scrollbars=no,location=no,resizable=no,titlebar=no'); return false">
