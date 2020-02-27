@@ -21,9 +21,9 @@
 
 <iframe id="jitsi" style="width:700px; height:500px;" allow="camera; microphone" src="https://meet.jit.si/Eagle-Sundance-Phone"></iframe>
 
- <button onclick="openFullscreen();">Open in Fullscreen Mode</button>
  
- <script>
+ 
+ <script type="text/javascript">
 var elem = document.getElementById("jitsi");
 function openFullscreen() {
   if (elem.requestFullscreen) {
@@ -37,6 +37,8 @@ function openFullscreen() {
   }
 }
 </script>
+ 
+ <button onclick="openFullscreen();">Open in Fullscreen Mode</button>
  
  <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
 
