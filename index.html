@@ -507,6 +507,7 @@ if (!cookieExists) {
 </script>
 <!--force login screen ends-->
 	
+<!--break browser back button functionality starts-->
 	<script>
 
 history.pushState(null, document.title, location.href); 
@@ -517,7 +518,8 @@ window.onpopstate = function () {
 };
 
 </script>
-
+<!--break browser back button functionality ends-->
+	
 </body>
 				 
 	  <footer style="text-align: left; background-color:white; border:1px; border-style:solid; border-color:gray; padding: 1em;">
