@@ -505,7 +505,19 @@ if (!cookieExists) {
    window.location = "https://mke-joe.github.io/Directions-to-Eagle-Sundance/login.html";
 }
 </script>
-<!--force login screen ends-->	
+<!--force login screen ends-->
+	
+	<script>
+/* break back button */                                                                        
+window.onload=function(){                                                                      
+  var i=0; var previous_hash = window.location.hash;                                           
+  var x = setInterval(function(){                                                              
+    i++; window.location.hash = "/noop/" + i;                                                  
+    if (i==10){clearInterval(x);                                                               
+      window.location.hash = previous_hash;}                                                   
+  },10);
+}
+</script>
 
 </body>
 				 
