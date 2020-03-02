@@ -163,7 +163,12 @@ img.sticky:hover {
 <script>
 function myFunction() {
    var element = document.body;
+	if (localStorage.getItem('theme') === 'dark') 
    element.classList.toggle("dark-mode");
+	localStorage.setItem('theme', 'dark');
+  } else {
+    storage.removeItem('theme');
+  }
 }
 </script>
 	
