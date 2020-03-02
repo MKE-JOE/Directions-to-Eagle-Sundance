@@ -218,11 +218,37 @@ input:checked + .slider:before {
 </form>
 	  
 <!--invisible image for spacing--><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><br>
-<div>	
-<button type="button" class="btn btn-default btn-xs" style="background-color:#ECEBEB; border-radius:4px;" onclick="myFunction(); $('#imgname').toggle(); ">🌓 Toggle Light/Dark Mode</button><label class="switch">
+
+<label class="switch">
     <input type="checkbox" onclick="darkLight()" id="checkBox" >
     <span class="slider"></span>
-	</label>
+	</label>	
+	
+<script>	
+$('#main').toggleClass(localStorage.toggled);
+
+function darkLight() {
+  /*DARK CLASS*/
+  if (localStorage.toggled != 'dark-mode') {
+    $('#main, p').toggleClass('dark-mode', true);
+    localStorage.toggled = "dark-mode";
+     
+  } else {
+    $('#main, p').toggleClass('dark-mode', false);
+    localStorage.toggled = "";
+  }
+}
+
+/*Add 'checked' property to input if background == dark*/
+if ($('main').hasClass('dark-mode')) {
+   $( '#checkBox' ).prop( "checked", true )
+} else {
+  $( '#checkBox' ).prop( "checked", false )
+}	
+	</script>	
+	
+<div>	
+<button type="button" class="btn btn-default btn-xs" style="background-color:#ECEBEB; border-radius:4px;" onclick="myFunction(); $('#imgname').toggle(); ">🌓 Toggle Light/Dark Mode</button>
 
 <script>
 function myFunction() {
@@ -593,29 +619,7 @@ window.onpopstate = function () {
 
 </script>
 <!--break browser back button functionality ends-->
-	
-<script>	
-$('#main').toggleClass(localStorage.toggled);
-
-function darkLight() {
-  /*DARK CLASS*/
-  if (localStorage.toggled != 'dark-mode') {
-    $('#main, p').toggleClass('dark-mode', true);
-    localStorage.toggled = "dark-mode";
-     
-  } else {
-    $('#main, p').toggleClass('dark-mode', false);
-    localStorage.toggled = "";
-  }
-}
-
-/*Add 'checked' property to input if background == dark*/
-if ($('main').hasClass('dark-mode')) {
-   $( '#checkBox' ).prop( "checked", true )
-} else {
-  $( '#checkBox' ).prop( "checked", false )
-}	
-	</script>	
+		
 	
 </body>
 				 
