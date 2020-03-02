@@ -155,6 +155,7 @@ img.sticky:hover {
 function myFunction() {
    var element = document.body;
    element.classList.toggle("dark-mode");
+   Cookies.set('toggle', '1',);
 }
 </script>
 	
@@ -167,6 +168,14 @@ $(function(){
    });
 });
 </script>
+	
+<script type="text/javascript">
+const cookieExists = Cookies.get('toggle');
+
+if (cookieExists) {
+   element.classList.toggle("dark-mode");
+}
+</script>	
 	
 	<div style="display:none;" id="imgname">
     <img class="img-responsive hidden" src="fire.gif" width="85px" height="125px">
