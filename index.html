@@ -545,17 +545,12 @@ $('#darkMode').on('click', function() {
     $(ele).addClass('dark-mode');
 
     // here i wanna save the value of darkMode in browser 
-    $.cookie('darkMode', 'dark', {
-      expires: 7,
-      path: '/'
-    });
+    Cookie.set('darkMode', 'dark');
 
   } else {
 
     $(ele).removeClass('dark-mode');
-    $.removeCookie('darkMode', {
-      path: '/'
-    });
+    Cookie.remove('darkMode');
   }
 
 });	
