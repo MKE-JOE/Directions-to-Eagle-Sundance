@@ -34,6 +34,12 @@
   color: #FF5733;
 }
 		
+body.dark-mode {
+  background-color: #250A07;
+  color: #FF5733;
+}		
+		
+		
 		/* Fade-in page - make keyframes that tell the start state and the end state of our object */
 @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
@@ -149,7 +155,7 @@ img.sticky:hover {
 	  
 <!--invisible image for spacing--><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><br>
 <div>	
-<button type="button" class="btn btn-default btn-xs" style="background-color:#ECEBEB; border-radius:4px;" onclick="myFunction(); $('#imgname').toggle(); ">🌓 Toggle Light/Dark Mode</button>
+<button type="button" class="btn btn-default btn-xs" style="background-color:#ECEBEB; border-radius:4px;" onclick="myFunction(); $('#imgname').toggle(); ">🌓 Toggle Light/Dark Mode</button><span><input type="checkbox" id="darkMode" name=""></span>
 
 <script>
 function myFunction() {
@@ -520,6 +526,39 @@ window.onpopstate = function () {
 
 </script>
 <!--break browser back button functionality ends-->
+	
+	
+var ele = 'body';
+
+$(document).ready(function() {
+  if ($.cookie('darkMode')) {
+    $(ele).addClass('dark-mode');
+    $('#darkMode').prop('checked', true)
+  }
+});
+
+$('#darkMode').on('click', function() {
+
+  if ($('#darkMode').prop('checked')) {
+
+    $(ele).addClass('dark-mode');
+
+    // here i wanna save the value of darkMode in browser 
+    $.cookie('darkMode', 'dark', {
+      expires: 7,
+      path: '/'
+    });
+
+  } else {
+
+    $(ele).removeClass('dark-mode');
+    $.removeCookie('darkMode', {
+      path: '/'
+    });
+  }
+
+});	
+	
 	
 </body>
 				 
