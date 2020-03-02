@@ -167,36 +167,6 @@ function myFunction() {
 }
 </script>
 	
-<script>	
-	const body = document.querySelector('body');
-const checkBox = document.getElementById('checkbox');
-
-window.addEventListener('load', () => {        
-
-    if (!localStorage.dark_mode)
-        localStorage.dark_mode = false;
-
-    else if (JSON.parse(localStorage.dark_mode) === true) {
-            body.classList.add('dark-mode');
-            checkbox.checked = true;
-            }
-});
-
-checkBox.addEventListener('click', (e) => {
-    body.classList.toggle('dark-mode');
-
-    if (body.classList.contains('dark-mode')) {
-        checkbox.checked = true;
-        localStorage.dark_mode = true;
-    }
-    else {
-        checkbox.checked = false;
-        localStorage.dark_mode = false;
-    }
-});
-	</script>
-	
-	
 <script>
 $(function(){
    $("button").click(function(){
