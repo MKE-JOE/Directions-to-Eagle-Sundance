@@ -230,11 +230,11 @@ $('#main').toggleClass(localStorage.toggled);
 function darkLight() {
   /*DARK CLASS*/
   if (localStorage.toggled != 'dark-mode') {
-    $('#main, p').toggleClass('dark-mode', true);
+    $('#main, body').toggleClass('dark-mode', true);
     localStorage.toggled = "dark-mode";
      
   } else {
-    $('#main, p').toggleClass('dark-mode', false);
+    $('#main, body').toggleClass('dark-mode', false);
     localStorage.toggled = "";
   }
 }
