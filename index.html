@@ -532,7 +532,8 @@ window.onpopstate = function () {
 var ele = 'body';
 
 $(document).ready(function() {
-  if ($.cookie('darkMode')) {
+const cookieExists = Cookies.get('darkMode');	
+  if (cookieExists) {
     $(ele).addClass('dark-mode');
     $('#darkMode').prop('checked', true)
   }
@@ -545,7 +546,7 @@ $('#darkMode').on('click', function() {
     $(ele).addClass('dark-mode');
 
     // here i wanna save the value of darkMode in browser 
-    Cookie.set('darkMode', 'dark');
+    Cookie.set('darkMode', 'dark',)
 
   } else {
 
