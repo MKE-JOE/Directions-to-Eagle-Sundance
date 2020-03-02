@@ -519,6 +519,25 @@ window.onpopstate = function () {
 
 </script>
 <!--break browser back button functionality ends-->
+
+<script>
+	$(document).ready(function($) {
+  var mode = localStorage.getItem('mode');
+  if (mode) 
+    $('body').addClass(mode);
+
+  $(".darkmode").click(function() {
+    $("body").addClass("dark-mode");
+    localStorage.setItem('mode', 'dark-mode');
+  });
+
+  $(".normalmode").click(function() {
+    $("body").removeClass("dark-mode");
+    localStorage.setItem('mode', null);
+  });
+});
+	</script>
+	
 	
 </body>
 				 
