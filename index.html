@@ -165,7 +165,7 @@ img.sticky:hover {
 <div>	
 <button type="button" class="btn btn-default btn-xs" style="background-color:#ECEBEB; border-radius:4px;" onclick="myFunction(); $('#imgname').toggle();">🌓 Toggle Light/Dark Mode</button>
 	
-	<input type="checkbox" onchange="toggle(this.checked);" id="darkModeIndicator" $('#imgname').toggle();/>
+	<input type="checkbox" onchange="toggle(this.checked);" id="darkModeIndicator"/>
 	
 	<script>
 	function toggle(darkmode) {
@@ -200,16 +200,7 @@ $(function(){
    });
 });
 </script>
-	
-	<script>
-$(function(){
-   $("checkbox").click(function(){
-       $("img").toggleClass("hidden");
-   });
-});
-</script>
-	
-		
+			
 	<div style="display:none;" id="imgname">
     <img class="img-responsive hidden" src="fire.gif" width="85px" height="125px">
 </div>
