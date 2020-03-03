@@ -27,6 +27,11 @@
   border-color: gray; 
   padding: 1em;
   font-family: Arial, Helvetica, sans-serif;
+	  transition: all 0.8s;
+	  &.dark-mode {
+	background-color: #250A07;
+        color: #FF5733;
+	  }
 		}		
 		
 		/* Dark mode */
@@ -158,7 +163,30 @@ img.sticky:hover {
 <!--invisible image for spacing--><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><br>
 	
 <div>	
-<button type="button" class="btn btn-default btn-xs" style="background-color:#ECEBEB; border-radius:4px;" onclick="myFunction(); $('#imgname').toggle();">🌓 Toggle Light/Dark Mode</button>
+<button type="button" class="btn btn-default btn-xs" style="background-color:#ECEBEB; border-radius:4px;" onclick="myFunction(); $('#imgname').toggle();">🌓 Toggle Light/Dark Mode</button><input
+  type="checkbox"
+  onchange="toggle(this.checked);"
+  id="darkModeIndicator"
+/>
+	
+	<script>
+	function toggle(darkmode) {
+  /* Yea, this is ugly due to the fact that when we retrieve from localStorage,
+   it gives us all as strings. >_O */
+  darkmode === 'true' || darkmode === true
+    ? document.body.classList.add('dark-mode')
+    : document.body.classList.remove('dark-mode');
+
+  // Do remember to choose a meaningful name under the respective namespace.
+  window.localStorage.setItem('toggle', darkmode);
+}
+
+toggle(window.localStorage.getItem('toggle'));
+
+// Make sure the below will be called after the night-mode checkbox creation.
+document.getElementById('darkModeIndicator').checked =
+  window.localStorage.getItem('toggle') === 'true';
+	</script>
 
 <script>
 function myFunction() {
