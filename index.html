@@ -629,6 +629,11 @@ window.onpopstate = function () {
     })(jQuery);
 
 $('h1').marquee();
+$('h2').marquee({ count: 2 });
+$('h3').marquee({ speed: 5 });
+$('h4').marquee({ leftToRight: true });
+$('h5').marquee({ count: 1, speed: 2 }).done(function() { $('h5').css('color', '#f00'); })
+	
 </script>	
 	
 	
