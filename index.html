@@ -159,6 +159,22 @@ img.sticky:hover {
 	
 <div>	
 <button type="button" class="btn btn-default btn-xs" style="background-color:#ECEBEB; border-radius:4px;" onclick="myFunction(); $('#imgname').toggle();">🌓 Toggle Light/Dark Mode</button>
+<span>Dark
+  <input class='tgl tgl-default' id='dark-mode' type='checkbox' />
+  <label class='tgl-btn' for='dark-mode' />
+</span>
+	
+	<script>
+		$(() => {
+  const theme = 'dark-mode';
+  const darkMode = localStorage.getItem(theme);
+  $('body').toggleClass(theme, darkMode === 'true');
+  $('#' + theme).prop('checked', darkMode === 'true').click(function() {
+    $("body").toggleClass(theme, $(this).is(':checked'));
+    localStorage.setItem(theme, String($(this).is(':checked')));
+  });
+});
+	</script>
 
 <script>
 function myFunction() {
