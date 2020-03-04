@@ -143,7 +143,22 @@ img.sticky:hover {
 			  <!--<b><marquee style="font-size:110%; background-color:white; border:1px; border-style:solid; border-color:gray; padding: 1em;">
 			  Boozhoo, ndiniwemaaganag! Quick reminder: If you are planning to dance this year, find a helper to bring with you to the Sundance. Don't wait till the last minute!</marquee></b><br>-->
 		  
-</div>
+                   <script>
+	$(function(){
+		$('.marquee').marquee({duration: 10000,});
+
+		
+	});
+</script>
+	
+	<script src="jquery.marquee.js"></script>
+
+<script src="jquery.pause.js"></script>
+
+<script src="jquery.easing.min.js"></script>
+		 
+		 
+		 </div>
 			  </header>
 		
 		<body oncontextmenu="return false">
@@ -563,20 +578,6 @@ window.onpopstate = function () {
 
 </script>
 <!--break browser back button functionality ends-->
-	
-	<script>
-	$(function(){
-		$('.marquee').marquee({duration: 10000,});
-
-		
-	});
-</script>
-	
-	<script src="jquery.marquee.js"></script>
-
-<script src="jquery.pause.js"></script>
-
-<script src="jquery.easing.min.js"></script>
 	
 </body>
 				 
