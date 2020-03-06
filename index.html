@@ -670,10 +670,10 @@ $(function () {
 .path {
   position: relative;
   overflow: hidden;
-  width: 100%;
+  width: calc(100% - 123px);
   height: 150px;
   background-color: white;
-  margin: auto;
+  overflow: visible;
 }
 .shape {
   position: absolute;
@@ -694,11 +694,10 @@ $(function () {
     left: 0;
   }
   50% {
-    left: 90%;
+    left: 100%;
   }
   100% {
     left: 0;
-    transform: translateX(-100%);
   }
 }
 </style>
