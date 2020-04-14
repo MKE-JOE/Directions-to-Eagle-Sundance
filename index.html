@@ -190,8 +190,41 @@ img.sticky:hover {
 <img class="sticky" src="SD.logo.speech.png" alt="SD" align="right"></a>
 	        <!--contactbox ends-->
 	
-	  <p style="letter-spacing: 0.1em; font-weight:normal; text-align:left; color:red; border:3px; border-style:solid; border-color:#FF0000; padding: 1em;font-size:14px; text-indent: 3%;">This page is not intended to be shared on a public forum! Please DO NOT share this page on Facebook or any other social media platform outside of our own Eagle Sundance Facebook Group page. This page was created out of necessity as a general resource to help our Sundance family stay up to date on Eagle Sundance events. If you should see this page posted on <i>any</i> public social media platform, please ask for it to be removed immediately and contact us as soon as possible. Miigwech, thank you for honoring this request. If you are a member of our Sundance community, feel free to share this page respectfully with your friends and relatives in a good way.</p><br> 
+<p style="letter-spacing: 0.1em; font-weight:normal; text-align:left; color:red; border:3px; border-style:solid; border-color:#FF0000; padding: 1em;font-size:14px; text-indent: 3%;">This page is not intended to be shared on a public forum! Please DO NOT share this page on Facebook or any other social media platform outside of our own Eagle Sundance Facebook Group page. This page was created out of necessity as a general resource to help our Sundance family stay up to date on Eagle Sundance events. If you should see this page posted on <i>any</i> public social media platform, please ask for it to be removed immediately and contact us as soon as possible. Miigwech, thank you for honoring this request. If you are a member of our Sundance community, feel free to share this page respectfully with your friends and relatives in a good way.</p><br> 
 	
+	<div>	
+<button type="button" class="btn btn-default btn-xs" style="background-color:#ECEBEB; border-radius:4px;" onclick="myFunction(); $('#imgname').toggle();">🌓 Toggle Light/Dark Mode</button>
+	
+	<input type="checkbox" onchange="toggle(this.checked);" id="darkModeIndicator"/><div>
+	<small style="font-size:10px";>(Check box to choose 'Dark Mode' as default setting)</small>
+	</div>
+	
+	<script>
+	function toggle(darkmode) {
+  /* Yea, this is ugly due to the fact that when we retrieve from localStorage,
+   it gives us all as strings. >_O */
+  darkmode === 'true' || darkmode === true
+    ? document.body.classList.add('dark-mode')
+    : document.body.classList.remove('dark-mode');
+
+  // Do remember to choose a meaningful name under the respective namespace.
+  window.localStorage.setItem('toggle', darkmode);
+}
+
+toggle(window.localStorage.getItem('toggle'));
+
+// Make sure the below will be called after the night-mode checkbox creation.
+document.getElementById('darkModeIndicator').checked =
+  window.localStorage.getItem('toggle') === 'true';
+	</script>
+
+<script>
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+</script>		
+			
         <h1 style="text-align: center;">Announcement:</h1> 
         <div class="scroll" style="border: 3px solid; padding: 1.25em; border-color: red; margin:1em, 1em; padding:1em; height: 200px; overflow-x: hidden; overflow-x: auto; text-align:left; letter-spacing: 0.1em;">
 <b>4/10/2020<br><br>
@@ -228,40 +261,8 @@ Angela, Cory, Curtis, Joe</b><br><br>
 	  
 <!--invisible image for spacing--><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><br>
 	
-<div>	
-<button type="button" class="btn btn-default btn-xs" style="background-color:#ECEBEB; border-radius:4px;" onclick="myFunction(); $('#imgname').toggle();">🌓 Toggle Light/Dark Mode</button>
-	
-	<input type="checkbox" onchange="toggle(this.checked);" id="darkModeIndicator"/><div>
-	<small style="font-size:10px";>(Check box to choose 'Dark Mode' as default setting)</small>
-	</div>
-	
-	<script>
-	function toggle(darkmode) {
-  /* Yea, this is ugly due to the fact that when we retrieve from localStorage,
-   it gives us all as strings. >_O */
-  darkmode === 'true' || darkmode === true
-    ? document.body.classList.add('dark-mode')
-    : document.body.classList.remove('dark-mode');
 
-  // Do remember to choose a meaningful name under the respective namespace.
-  window.localStorage.setItem('toggle', darkmode);
-}
-
-toggle(window.localStorage.getItem('toggle'));
-
-// Make sure the below will be called after the night-mode checkbox creation.
-document.getElementById('darkModeIndicator').checked =
-  window.localStorage.getItem('toggle') === 'true';
-	</script>
-
-<script>
-function myFunction() {
-   var element = document.body;
-   element.classList.toggle("dark-mode");
-}
-</script>
-
-	<!--fire.gif
+<!--fire.gif
 
 <script>
 $(function(){
