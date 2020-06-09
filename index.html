@@ -206,6 +206,8 @@ img.sticky:hover {
   darkmode === 'true' || darkmode === true
     ? document.body.classList.add('dark-mode')
     : document.body.classList.remove('dark-mode');
+		? document.body.classList.add('hidden')
+    : document.body.classList.remove('hidden');
 
   // Do remember to choose a meaningful name under the respective namespace.
   window.localStorage.setItem('toggle', darkmode);
@@ -222,8 +224,27 @@ document.getElementById('darkModeIndicator').checked =
 function myFunction() {
    var element = document.body;
    element.classList.toggle("dark-mode");
+	<img style="display:none;" class="img-responsive hidden" src="fire.gif" width="85px" height="125px">
 }
-</script>		
+</script>
+		
+		
+		
+		<!--fire.gif
+
+<script>
+$(function(){
+   $("button").click(function(){
+       $("img").toggleClass("hidden");
+   });
+});
+</script>
+			
+	<div style="display:none;" id="imgname">
+    <img class="img-responsive hidden" src="fire.gif" width="85px" height="125px">
+</div>
+
+fire.gif-->
 			
         <h1 style="text-align: center;">Announcements:</h1> 
         <div class="scroll" style="border: 3px solid; padding: 1.25em; border-color: red; margin:1em, 1em; padding:1em; height: 200px; overflow-x: hidden; overflow-x: auto; text-align:left; letter-spacing: 0.1em;">
@@ -336,22 +357,6 @@ Angela, Cory, Curtis, Joe</b><br><br>
 	  
 <!--invisible image for spacing--><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><br>
 	
-
-<!--fire.gif
-
-<script>
-$(function(){
-   $("button").click(function(){
-       $("img").toggleClass("hidden");
-   });
-});
-</script>
-			
-	<div style="display:none;" id="imgname">
-    <img class="img-responsive hidden" src="fire.gif" width="85px" height="125px">
-</div>
-
-fire.gif-->
 	
 	</div>	
 	<!--Facebook Group button starts	  
