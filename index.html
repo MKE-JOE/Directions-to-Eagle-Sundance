@@ -206,8 +206,6 @@ img.sticky:hover {
   darkmode === 'true' || darkmode === true
     ? document.body.classList.add('dark-mode')
     : document.body.classList.remove('dark-mode');
-		? document.body.classList.add('hidden')
-    : document.body.classList.remove('hidden');
 
   // Do remember to choose a meaningful name under the respective namespace.
   window.localStorage.setItem('toggle', darkmode);
@@ -224,7 +222,6 @@ document.getElementById('darkModeIndicator').checked =
 function myFunction() {
    var element = document.body;
    element.classList.toggle("dark-mode");
-	<img style="display:none;" class="img-responsive hidden" src="fire.gif" width="85px" height="125px">
 }
 </script>
 		
