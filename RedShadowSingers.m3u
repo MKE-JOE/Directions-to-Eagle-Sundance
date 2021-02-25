@@ -1,0 +1,52 @@
+#EXTM3U
+#EXTINF:0,2_Creator.mp3
+2_Creator.mp3
+
+#EXTINF:0,2_Eagle Song.mp3
+webpage songs\2_Eagle Song.mp3
+
+#EXTINF:0,2_Thunderbird-Song.mp3
+webpage songs\2_Thunderbird-Song.mp3
+
+#EXTINF:0,2_Wolf-Song.mp3
+webpage songs\2_Wolf-Song.mp3
+
+#EXTINF:0,Bear Song.mp3
+webpage songs\Bear Song.mp3
+
+#EXTINF:0,Beaver Song.mp3
+webpage songs\Beaver Song.mp3
+
+#EXTINF:0,Black Bear Song.mp3
+webpage songs\Black Bear Song.mp3
+
+#EXTINF:0,Buffalo Song.mp3
+webpage songs\Buffalo Song.mp3
+
+#EXTINF:0,Coming of the Thunderbird.mp3
+webpage songs\Coming of the Thunderbird.mp3
+
+#EXTINF:0,Creator Song.mp3
+webpage songs\Creator Song.mp3
+
+#EXTINF:0,Eagle Song.mp3
+webpage songs\Eagle Song.mp3
+
+#EXTINF:0,Grizzly Bear.mp3
+webpage songs\Grizzly Bear.mp3
+
+#EXTINF:0,Spirit Bear.mp3
+webpage songs\Spirit Bear.mp3
+
+#EXTINF:0,Talking to the Thunderbird.mp3
+webpage songs\Talking to the Thunderbird.mp3
+
+#EXTINF:0,Thunderbird-Eagle.mp3
+webpage songs\Thunderbird-Eagle.mp3
+
+#EXTINF:0,Turtle-Song.mp3
+webpage songs\Turtle-Song.mp3
+
+#EXTINF:0,Wolf-Song.mp3
+webpage songs\Wolf-Song.mp3
+
