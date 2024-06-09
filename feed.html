@@ -11,7 +11,7 @@
         <div class="icon-container">
             <img src="apple-touch-icon.png" alt="App Icon">
         </div>
-        <h1>Eagle Sundance Message Board</h1>
+        <h1>Message Board</h1>
         <div class="button-container">
             <button class="join-button" onclick="window.open('https://eagle-sd-message-board-2eab903cc1ec.herokuapp.com', '_blank')">Join the conversation!</button>
         </div>
@@ -35,7 +35,7 @@
                 messagesDiv.innerHTML = ''; // Clear existing messages
 
                 // Display only the most recent 4 messages
-                const recentItems = Array.from(items).slice(0, 5);
+                const recentItems = Array.from(items).slice(0, 4);
 
                 recentItems.forEach(item => {
                     const messageContainer = document.createElement('div');
