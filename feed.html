@@ -2,16 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="HandheldFriendly" content="true">
-    <meta name="robots" content="noindex, nofollow">
-    <meta name="googlebot" content="noindex, nofollow">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RSS Feed Reader</title>
-    <link rel="stylesheet" href="feed.css"> <!-- Separate CSS file -->
+    <link rel="stylesheet" href="rss-feed.css"> <!-- Separate CSS file -->
 </head>
 <body>
     <div class="icon-container">
@@ -27,24 +20,16 @@
     <script>
         async function fetchRSS() {
             try {
-                console.log('Fetching RSS feed...');
                 const response = await fetch('https://eagle-sd-message-board-2eab903cc1ec.herokuapp.com/feed.php');
                 if (!response.ok) {
                     throw new Error('Network response was not ok ' + response.statusText);
                 }
                 let text = await response.text();
-                console.log('Raw RSS feed fetched:', text);
-
-                // Trim leading and trailing whitespace
                 text = text.trim();
-                console.log('Trimmed RSS feed:', text);
-
                 const parser = new DOMParser();
                 const xml = parser.parseFromString(text, "application/xml");
-                console.log('Parsed XML:', xml);
 
                 const items = xml.querySelectorAll("item");
-                console.log('RSS items:', items);
 
                 const messagesDiv = document.getElementById('messages');
                 messagesDiv.innerHTML = ''; // Clear existing messages
@@ -69,8 +54,7 @@
         }
 
         fetchRSS();
-        setInterval(fetchRSS, 216000000); // Refresh every hour - *30000 is 30 seconds*
+        setInterval(fetchRSS, 3600000); // Refresh every hour
     </script>
 </body>
 </html>
-
