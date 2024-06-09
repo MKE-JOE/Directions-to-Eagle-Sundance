@@ -1,15 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="HandheldFriendly" content="true">
-    <meta name="robots" content="noindex, nofollow">
-    <meta name="googlebot" content="noindex, nofollow">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RSS Feed Reader</title>
     <link rel="stylesheet" href="feed.css"> <!-- Separate CSS file -->
 </head>
@@ -55,6 +48,13 @@
                     messageContainer.innerHTML = `<strong>${username}</strong>: ${message} <div class="timestamp">${new Date(pubDate).toLocaleString()}</div>`;
                     messagesDiv.appendChild(messageContainer);
                 });
+
+                // Adjust the iframe height to fit content
+                window.parent.postMessage({
+                    type: 'resize-iframe',
+                    height: document.body.scrollHeight
+                }, '*');
+
             } catch (error) {
                 console.error('Error fetching or parsing RSS feed:', error);
             }
