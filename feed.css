@@ -10,9 +10,8 @@ body {
     box-sizing: border-box;
 }
 .container {
-    width: 80%;
-    max-width: 600px;
-    margin: 20px auto;
+    width: 100%;
+    max-height: 400px; /* Set maximum height for the container */
     background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
@@ -20,6 +19,8 @@ body {
     overflow: hidden;
     box-sizing: border-box;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 h1 {
     color: #000; /* black */
@@ -44,9 +45,10 @@ h1 {
 }
 #messages {
     padding: 10px;
-    max-height: 400px;
+    max-height: calc(100% - 160px); /* Adjust based on other elements' height */
     overflow-y: auto;
     box-sizing: border-box;
+    flex-grow: 1; /* Allow it to grow and fill available space */
 }
 .message-container {
     padding: 10px;
