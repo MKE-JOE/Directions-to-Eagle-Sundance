@@ -10,8 +10,11 @@ body {
     box-sizing: border-box;
 }
 .container {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
     width: 100%;
-    max-height: 500px; /* Set maximum height for the container */
+    max-height: 400px; /* Set maximum height for the container */
     background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
@@ -24,27 +27,11 @@ body {
 }
 h1 {
     color: #000; /* black */
-    text-align: center;
-    margin: 10px 0;
-}
-.button-container {
-    text-align: center;
-    margin: 10px 0;
-}
-.join-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-.join-button:hover {
-    background-color: #45a049;
+@@ -44,9 +45,10 @@ h1 {
 }
 #messages {
     padding: 10px;
+    max-height: 400px;
     max-height: calc(100% - 160px); /* Adjust based on other elements' height */
     overflow-y: auto;
     box-sizing: border-box;
@@ -52,27 +39,12 @@ h1 {
 }
 .message-container {
     padding: 10px;
-    margin-bottom: 10px;
-    background-color: #f1f1f1;
-    border-radius: 5px;
-}
-.message-container:last-child {
-    margin-bottom: 0;
-}
-.message-container strong {
-    color: #007bff; /* blue */
-}
-.message-container .timestamp {
-    display: block;
-    font-size: 75%;
-    color: #888;
-    margin-top: 5px;
-}
-.icon-container {
-    text-align: center;
+@@ -71,6 +73,6 @@ h1 {
     margin-bottom: 10px;
 }
 .icon-container img {
+    width: 64px;
+    height: 64px;
     width: 32px;
     height: 32px;
 }
