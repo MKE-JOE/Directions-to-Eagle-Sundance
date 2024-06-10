@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RSS Feed Reader</title>
-    <link rel="stylesheet" href="feed.css"> <!-- Separate CSS file -->
+    <link rel="stylesheet" href="rss-feed.css"> <!-- Separate CSS file -->
 </head>
 <body>
     <div class="container">
@@ -48,6 +48,13 @@
                     messageContainer.innerHTML = `<strong>${username}</strong>: ${message} <div class="timestamp">${new Date(pubDate).toLocaleString()}</div>`;
                     messagesDiv.appendChild(messageContainer);
                 });
+
+                // Adjust the iframe height to fit content
+                window.parent.postMessage({
+                    type: 'resize-iframe',
+                    height: document.body.scrollHeight
+                }, '*');
+
             } catch (error) {
                 console.error('Error fetching or parsing RSS feed:', error);
             }
