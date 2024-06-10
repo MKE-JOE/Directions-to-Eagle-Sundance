@@ -19,49 +19,50 @@
     </div>
     <script>
         async function fetchRSS() {
-            try {
-                const response = await fetch('https://eagle-sd-message-board-2eab903cc1ec.herokuapp.com/feed.php');
-                if (!response.ok) {
-                    throw new Error('Network response was not ok ' + response.statusText);
-                }
-                let text = await response.text();
-                text = text.trim();
-                const parser = new DOMParser();
-                const xml = parser.parseFromString(text, "application/xml");
-
-                const items = xml.querySelectorAll("item");
-
-                const messagesDiv = document.getElementById('messages');
-                messagesDiv.innerHTML = ''; // Clear existing messages
-
-                // Display only the most recent 4 messages
-                const recentItems = Array.from(items).slice(0, 4);
-
-                recentItems.forEach(item => {
-                    const messageContainer = document.createElement('div');
-                    messageContainer.classList.add('message-container');
-
-                    const username = item.querySelector("title").textContent;
-                    const message = item.querySelector("description").textContent;
-                    const pubDate = item.querySelector("pubDate").textContent;
-
-                    messageContainer.innerHTML = `<strong>${username}</strong>: ${message} <div class="timestamp">${new Date(pubDate).toLocaleString()}</div>`;
-                    messagesDiv.appendChild(messageContainer);
-                });
-
-                // Adjust the iframe height to fit content
-                window.parent.postMessage({
-                    type: 'resize-iframe',
-                    height: document.body.scrollHeight
-                }, '*');
-
-            } catch (error) {
-                console.error('Error fetching or parsing RSS feed:', error);
-            }
+    try {
+        const response = await fetch('http://eagle-sundance.mywebcommunity.org/prox.php'); // Use your domain here
+        if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
         }
+        let text = await response.text();
+        text = text.trim();
+        const parser = new DOMParser();
+        const xml = parser.parseFromString(text, "application/xml");
 
-        fetchRSS();
-        setInterval(fetchRSS, 3600000); // Refresh every hour
+        const items = xml.querySelectorAll("item");
+
+        const messagesDiv = document.getElementById('messages');
+        messagesDiv.innerHTML = ''; // Clear existing messages
+
+        // Display only the most recent 4 messages
+        const recentItems = Array.from(items).slice(0, 4);
+
+        recentItems.forEach(item => {
+            const messageContainer = document.createElement('div');
+            messageContainer.classList.add('message-container');
+
+            const username = item.querySelector("title").textContent;
+            const message = item.querySelector("description").textContent;
+            const pubDate = item.querySelector("pubDate").textContent;
+
+            messageContainer.innerHTML = `<strong>${username}</strong>: ${message} <div class="timestamp">${new Date(pubDate).toLocaleString()}</div>`;
+            messagesDiv.appendChild(messageContainer);
+        });
+
+        // Adjust the iframe height to fit content
+        window.parent.postMessage({
+            type: 'resize-iframe',
+            height: document.body.scrollHeight
+        }, '*');
+
+    } catch (error) {
+        console.error('Error fetching or parsing RSS feed:', error);
+    }
+}
+
+fetchRSS();
+setInterval(fetchRSS, 3600000); // Refresh every hour
+
     </script>
 </body>
 </html>
