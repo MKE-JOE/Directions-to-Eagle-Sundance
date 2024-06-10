@@ -13,14 +13,14 @@
         </div>
         <h1>Eagle Sundance Message Board</h1>
         <div class="button-container">
-            <button class="join-button" onclick="window.open('https://eagle-sd-message-board-2eab903cc1ec.herokuapp.com', '_blank')">Join the conversation!</button>
+            <button class="join-button" onclick="window.open('https://eagle-sd-message-board.adaptable.app', '_blank')">Join the conversation!</button>
         </div>
         <div id="messages"></div>
     </div>
     <script>
         async function fetchRSS() {
             try {
-                const response = await fetch('https://eagle-sd-message-board-2eab903cc1ec.herokuapp.com/feed.php');
+                const response = await fetch('https://eagle-sd-message-board.adaptable.app/feed.php');
                 if (!response.ok) {
                     throw new Error('Network response was not ok ' + response.statusText);
                 }
