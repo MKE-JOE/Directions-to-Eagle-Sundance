@@ -222,6 +222,36 @@
                 transform: translateX(0%);
             }
         }
+
+	    #stream-container {
+            text-align: center;
+            display: block;
+            margin: auto;
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+        #stream-image {
+            border: 1px solid red;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        #placeholder {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        #placeholder a {
+            display: block;
+            margin-top: 10px;
+            text-decoration: none;
+            color: blue;
+            cursor: pointer;
+        }
     </style>
 </head>
 
@@ -529,10 +559,18 @@
                 <h2><b><u>Other Resources:</u></b></h2><br>
                 <div>
                     <b>Ashland BayCam: Livestream</b>
+
+		 <div id="stream-container">
+                     <img id="stream-image" src="https://baycam.nsbashland.com/mjpg/video.mjpg?timestamp=1651087977248" alt="Stream Image">
+                     <div id="placeholder">
+                          <p>Stream stalled?</p>
+                          <a id="refresh-link">Refresh</a>
+                     </div>
                 </div>
+                <!---</div>
                 <div style="text-align: center; scrolling: no; display: block; -webkit-user-select: none; margin: auto; opacity: 1;" width="100%" height="100% vh">
                     <img style="opacity: 1; text-align: center; border: 1px solid red;" src="https://baycam.nsbashland.com/mjpg/video.mjpg?timestamp=1651087977248" width="100%" height="100% vh" scrolling="no"></img>
-                </div>
+                </div>--->
     
                 <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><br><br>	  
                 <div>
@@ -556,7 +594,34 @@
         </div>
     </div>
 
-    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><br>	
+    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><br>
+
+	    <!---start webstream script--->
+<script>
+        const streamImage = document.getElementById('stream-image');
+        const placeholder = document.getElementById('placeholder');
+        const refreshLink = document.getElementById('refresh-link');
+
+        // Function to show the placeholder and hide the image
+        function showPlaceholder() {
+            streamImage.style.display = 'none';
+            placeholder.style.display = 'block';
+        }
+
+        // Function to refresh the image
+        function refreshStream() {
+            streamImage.src = 'https://baycam.nsbashland.com/mjpg/video.mjpg?timestamp=' + new Date().getTime();
+            streamImage.style.display = 'block';
+            placeholder.style.display = 'none';
+        }
+
+        // Add error event listener to the image
+        streamImage.addEventListener('error', showPlaceholder);
+
+        // Add click event listener to the refresh link
+        refreshLink.addEventListener('click', refreshStream);
+    </script>
+	    <!---end webstream script--->
 
     <!--start rss commoninja script-->
     <script src="https://cdn.commoninja.com/sdk/latest/commonninja.js" defer></script>
