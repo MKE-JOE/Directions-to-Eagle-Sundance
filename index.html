@@ -222,6 +222,36 @@
                 transform: translateX(0%);
             }
         }
+
+	 #stream-container {
+            text-align: center; 
+	    scrolling: no; 
+	    display: block;
+	    -webkit-user-select: none;
+	    margin: auto; 
+	    opacity: 1;
+	    width: 100%;
+	    height: 100% vh;
+        }
+        #stream-image {
+            opacity: 1; 
+            text-align: center; 
+	    border: 1px solid red;
+	    width: 100%; 
+	    height: 100% vh; 
+	    scrolling: no;
+        }
+
+	#refresh-container {
+            text-align: center;
+            margin-top: 10px;
+        }
+        #refresh-container a {
+            text-decoration: none;
+            color: blue;
+            cursor: pointer;
+            margin-left: 5px;
+        }
     </style>
 </head>
 
@@ -529,11 +559,19 @@
                 <h2><b><u>Other Resources:</u></b></h2><br>
                 <div>
                     <b>Ashland BayCam: Livestream</b>
-
-                </div>
-                <div style="text-align: center; scrolling: no; display: block; -webkit-user-select: none; margin: auto; opacity: 1;" width="100%" height="100% vh">
+		</div>
+		    
+                <!---<div style="text-align: center; scrolling: no; display: block; -webkit-user-select: none; margin: auto; opacity: 1;" width="100%" height="100% vh">
                     <img style="opacity: 1; text-align: center; border: 1px solid red;" src="https://baycam.nsbashland.com/mjpg/video.mjpg?timestamp=1651087977248" width="100%" height="100% vh" scrolling="no"></img>
-                </div>
+                </div>--->
+		    
+		    <div id="stream-container">
+        <img id="stream-image" src="https://baycam.nsbashland.com/mjpg/video.mjpg?timestamp=1651087977248" alt="Stream Image">
+    </div>
+    <div id="refresh-container">
+        <span>Stream stalled?</span>
+        <a id="refresh-link">Refresh</a>
+    </div>
     
                 <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><br><br>	  
                 <div>
@@ -558,6 +596,21 @@
     </div>
 
     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><br>
+
+	<!---start stream--->
+	<script>
+        const streamImage = document.getElementById('stream-image');
+        const refreshLink = document.getElementById('refresh-link');
+
+        // Function to refresh the image
+        function refreshStream() {
+            streamImage.src = 'https://baycam.nsbashland.com/mjpg/video.mjpg?timestamp=' + new Date().getTime();
+        }
+
+        // Add click event listener to the refresh link
+        refreshLink.addEventListener('click', refreshStream);
+    </script>
+	<!---end stream--->
 
     <!--start rss commoninja script-->
     <script src="https://cdn.commoninja.com/sdk/latest/commonninja.js" defer></script>
