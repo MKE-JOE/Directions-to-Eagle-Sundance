@@ -16,7 +16,6 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
     <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles.css">
     <style>
         body {
             padding: 0;
@@ -164,39 +163,39 @@
             height: 500px;
         }
 
-        .lowerbackground {
+        div.lowerbackground {
             background: url(sweetgrass.jpg);
             background-size: cover;
             border: 2px solid black;
         }
 
-        .resources {
+        div.resources {
             margin: 20px;
             background-color: #DFDEDE;
             border: 1px solid black;
             opacity: 0.9;
         }
 
-        .resourcesp {
+        div.resourcesp {
             margin: 5%;
             font-weight: bold;
             color: #000000;
         }
 
-        .lowerbackground2 {
+        div.lowerbackground2 {
             background: url(sage.png);
             background-size: cover;
             border: 2px solid black;
         }
 
-        .resources2 {
+        div.resources2 {
             margin: 20px;
             background-color: #DFDEDE;
             border: 1px solid black;
             opacity: 0.9;
         }
 
-        .resourcesp2 {
+        div.resourcesp2 {
             margin: 5%;
             font-weight: bold;
             color: #000000;
@@ -244,110 +243,11 @@
                 transform: translateX(0%);
             }
         }
-
-        .header-container {
-            background-image: url(floral-banner.png);
-            background-size: contain;
-            border: 3px solid red;
-            padding: 1.25em;
-        }
-
-        .announcement-container {
-            border: 3px solid red;
-            padding: 1.25em;
-            margin: 1em;
-            overflow-x: auto;
-            text-align: left;
-            letter-spacing: 0.1em;
-        }
-
-        .directions-form-container {
-            text-align: center;
-        }
-
-        .directions-form label,
-        .directions-form input[type="submit"] {
-            display: block;
-            margin: 0.5em auto;
-        }
-
-        .directions-form input[type="text"] {
-            width: 100%;
-            max-width: 300px;
-            margin: 0.5em auto;
-            display: block;
-        }
-
-        .donate-section {
-            text-align: left;
-            text-indent: 3%;
-        }
-
-        .paypal-button-container {
-            text-align: center;
-        }
-
-        .chat-container {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        .weather-widget {
-            border: 2px solid;
-            border-color: darkblue;
-        }
-
-        .event-calendar {
-            border: 2px solid darkblue;
-            background-color: #74A8B7;
-            color: darkblue;
-            padding: 20px;
-            width: 900px;
-        }
-
-        .codebox {
-            margin: 20px;
-            margin-top: 5px;
-            border: 1px solid #3bbfe7;
-        }
-
-        .codebox dt {
-            height: 66px;
-            text-align: center;
-        }
-
-        .codebox input[type="button"] {
-            width: 110px;
-            height: 20px;
-            background-color: #ECEBEB;
-            font-size: 10px;
-            font-weight: 700;
-            margin: 0;
-            padding: 0;
-            border-radius: 4px;
-            letter-spacing: 0.1em;
-        }
-
-        .event-calendar h1 {
-            text-align: center;
-        }
-
-        footer {
-            text-align: left;
-            background-color: white;
-            border: 1px solid gray;
-            padding: 1em;
-        }
-
-        footer small {
-            font-size: 10px;
-        }
     </style>
 </head>
 <body oncontextmenu="return false">
     <header>
-        <div class="header-container">
+        <div style="background-image: url(floral-banner.png); background-size: contain; border: 3px solid red; padding: 1.25em;">
             <div class="marquee">
                 <p>Boozhoo, anishinaabeg! Boozhoo, ndinawemaaganag! Don't forget to bring your feast bundles/mess kits to these ceremonies...</p>
             </div>
@@ -382,7 +282,7 @@
         }
     </script>
     <h1 style="text-align: center;">Announcements:</h1>
-    <div class="announcement-container">
+    <div class="scroll" style="border: 3px solid red; padding: 1.25em; margin: 1em; overflow-x: auto; text-align:left; letter-spacing: 0.1em;">
         <br><br>
         This page has been updated with information for the 2024 Eagle Sundance Ceremony. Further updates to follow as the year progresses. Stay tuned!<br><br>
         <u>Supplies List for 2024 Eagle Sundance</u><br><br>
@@ -390,15 +290,15 @@
         <br><br><b style="font-size: 18px; color:red;">(Archived messages below this line)</b><br><br>
     </div>
     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><br><br>
-    <div class="directions-form-container">
-        <form class="directions-form" action="https://maps.google.com/maps" method="get" target="_blank">
+    <div style="text-align:center;">
+        <form action="https://maps.google.com/maps" method="get" target="_blank">
             <label for="saddr"><b>Enter your starting location (address) here to get directions to the Eagle Sundance grounds:</b></label><br>
             <input type="text" name="saddr" />
             <input type="hidden" name="daddr" value="40394 Schlies Rd., Highbridge, WI" />
             <input style="color:black; background-color:#ECEBEB; border-radius:4px; border-color: gray;" type="submit" value="Get Directions" />
         </form>
     </div>
-    <div class="donate-section">
+    <div>
         <form>
             <button style="background-color:#ECEBEB; border-radius:4px; padding:2px; color:black; border-color:gray;" formaction="javascript:emailCurrentPage()"><b>Email This Page to a Friend</b></button>
         </form>
@@ -430,70 +330,50 @@
             }
         }, 1000);
     </script>
-    <div class="weather-widget">
-        <a class="weatherwidget-io" href="https://forecast7.com/en/46d59n90d88/ashland/?unit=us" data-label_1="ASHLAND" data-label_2="WEATHER" data-theme="original">ASHLAND WEATHER</a>
+    <div>
+        <a style="border: 2px solid; border-color: darkblue;" class="weatherwidget-io" href="https://forecast7.com/en/46d59n90d88/ashland/?unit=us" data-label_1="ASHLAND" data-label_2="WEATHER" data-theme="original">ASHLAND WEATHER</a>
         <script>
             !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
         </script>
     </div>
-    <div class="event-calendar">
-        <h1>Eagle Sundance Events Calendar</h1>
-        <div class="codebox">
-            <dt><strong>1st Sundance Prep Meeting - Saturday, December 30th</strong></dt>
-            <dd>
-                <input type="button" value="Details" onclick="var spoiler = $(this).parents('.codebox').find('.content').toggle('slow'); if (this.value == 'Hide') { this.value = 'Details'; } else { this.value = 'Hide'; }; return false;">
-                <div class="content" name="spoiler" style="display: none;text-align:center;">
-                    <b>Saturday, December 30th from 12:00 pm to 11:00 pm. Contact us for more information.</b>
-                </div>
-            </dd>
+    <div style="border:2px solid darkblue; background-color:#74A8B7; color:darkblue; padding:20px; width:900px;">
+        <h1 style="text-align:center;">Eagle Sundance Events Calendar</h1>
+        <div style="margin:20px; margin-top:5px; border: 1px solid #3bbfe7;" class="codebox">
+            <dt style="height:66px; text-align: center;"><strong>1st Sundance Prep Meeting - Saturday, December 30th</strong><br>
+            <input type="button" value="Details" style="width:110px; height:20px; background-color:#ECEBEB; font-size:10px; font-weight:700; margin:0px; padding:0px; border-radius:4px; letter-spacing: 0.1em" onclick="var spoiler = $(this).parents('.codebox').find('.content').toggle('slow'); if (this.value == 'Hide') { this.value = 'Details'; } else { this.value = 'Hide'; }; return false;"></dt>
+            <dd><div class="content" name="spoiler" style="display: none;text-align:center;"><b>Saturday, December 30th from 12:00 pm to 11:00 pm. Contact us for more information.</b></div></dd>
         </div>
-        <div class="codebox">
-            <dt><strong>2nd Sundance Prep Meeting - Saturday, February 24th</strong></dt>
-            <dd>
-                <input type="button" value="Details" onclick="var spoiler = $(this).parents('.codebox').find('.content').toggle('slow'); if (this.value == 'Hide') { this.value = 'Details'; } else { this value = 'Hide'; }; return false;">
-                <div class="content" name="spoiler" style="display: none;text-align:center;">
-                    <b>Saturday, February 24th from 12:00 pm to 11:00 pm. Contact us for more information.</b>
-                </div>
-            </dd>
+        <div style="margin:20px; margin-top:5px; border: 1px solid #3bbfe7;" class="codebox">
+            <dt style="height:66px; text-align: center;"><strong>2nd Sundance Prep Meeting - Saturday, February 24th</strong><br>
+            <input type="button" value="Details" style="width:110px; height:20px; background-color:#ECEBEB; font-size:10px; font-weight:700; margin:0px; padding:0px; border-radius:4px; letter-spacing: 0.1em" onclick="var spoiler = $(this).parents('.codebox').find('.content').toggle('slow'); if (this.value == 'Hide') { this.value = 'Details'; } else { this.value = 'Hide'; }; return false;"></dt>
+            <dd><div class="content" name="spoiler" style="display: none;text-align:center;"><b>Saturday, February 24th from 12:00 pm to 11:00 pm. Contact us for more information.</b></div></dd>
         </div>
-        <div class="codebox">
-            <dt><strong>3rd Sundance Prep Meeting - Saturday, April 20th</strong></dt>
-            <dd>
-                <input type="button" value="Details" onclick="var spoiler = $(this).parents('.codebox').find('.content').toggle('slow'); if (this value == 'Hide') { this.value = 'Details'; } else { this value = 'Hide'; }; return false;">
-                <div class="content" name="spoiler" style="display: none;text-align:center;">
-                    <b>Saturday, April 20th from 12:00 pm to 10:00 pm. Contact us for more information.</b>
-                </div>
-            </dd>
+        <div style="margin:20px; margin-top:5px; border: 1px solid #3bbfe7;" class="codebox">
+            <dt style="height:66px; text-align: center;"><strong>3rd Sundance Prep Meeting - Saturday, April 20th</strong><br>
+            <input type="button" value="Details" style="width:110px; height:20px; background-color:#ECEBEB; font-size:10px; font-weight:700; margin:0px; padding:0px; border-radius:4px; letter-spacing: 0.1em" onclick="var spoiler = $(this).parents('.codebox').find('.content').toggle('slow'); if (this.value == 'Hide') { this.value = 'Details'; } else { this.value = 'Hide'; }; return false;"></dt>
+            <dd><div class="content" name="spoiler" style="display: none;text-align:center;"><b>Saturday, April 20th from 12:00 pm to 10:00 pm. Contact us for more information.</b></div></dd>
         </div>
-        <div class="codebox">
-            <dt><strong>Camp Day - Tuesday, June 18th</strong></dt>
-            <dd>
-                <input type="button" value="Details" onclick="var spoiler = $(this).parents('.codebox').find('.content').toggle('slow'); if (this value == 'Hide') { this value = 'Details'; } else { this value = 'Hide'; }; return false;">
-                <div class="content" name="spoiler" style="display: none;text-align:center;">
-                    <b>Tuesday, June 18th at 12:00 pm. All attending dancers and helpers are expected to be on the Sundance grounds on Camp Day to stay for the duration of the Sundance week. All dancers, helpers, and visitors to Eagle Sundance this year need to respect Covid protocols! Contact us for more information.</b>
-                </div>
-            </dd>
+        <div style="margin:20px; margin-top:5px; border: 1px solid #3bbfe7;" class="codebox">
+            <dt style="height:66px; text-align: center;"><strong>Camp Day - Tuesday, June 18th</strong><br>
+            <input type="button" value="Details" style="width:110px; height:20px; background-color:#ECEBEB; font-size:10px; font-weight:700; margin:0px; padding:0px; border-radius:4px; letter-spacing: 0.1em" onclick="var spoiler = $(this).parents('.codebox').find('.content').toggle('slow'); if (this.value == 'Hide') { this.value = 'Details'; } else { this value = 'Hide'; }; return false;"></dt>
+            <dd><div class="content" name="spoiler" style="display: none;text-align:center;"><b>Tuesday, June 18th at 12:00 pm. All attending dancers and helpers are expected to be on the Sundance grounds on Camp Day to stay for the duration of the Sundance week. All dancers, helpers, and visitors to Eagle Sundance this year need to respect Covid protocols! Contact us for more information.</b></div></dd>
         </div>
-        <div class="codebox">
-            <dt><strong>Sundance Ceremony - Thursday, June 20th - Sunday, June 23rd</strong></dt>
-            <dd>
-                <input type="button" value="Details" onclick="var spoiler = $(this).parents('.codebox').find('.content').toggle('slow'); if (this value == 'Hide') { this value = 'Details'; } else { this value = 'Hide'; }; return false;">
-                <div class="content" name="spoiler" style="display: none;text-align:center;">
-                    <b>Thursday, June 20th at sunrise through Sunday, June 23rd at midday. Tree Day begins at sunrise on Thursday, June 20th. All dancers, helpers, and visitors to Eagle Sundance this year need to respect Covid protocols! Contact us for more information.</b>
-                </div>
-            </dd>
+        <div style="margin:20px; margin-top:5px; border: 1px solid #3bbfe7;" class="codebox">
+            <dt style="height:66px; text-align: center;"><strong>Sundance Ceremony - Thursday, June 20th - Sunday, June 23rd</strong><br>
+            <input type="button" value="Details" style="width:110px; height:20px; background-color:#ECEBEB; font-size:10px; font-weight:700; margin:0px; padding:0px; border-radius:4px; letter-spacing: 0.1em" onclick="var spoiler = $(this).parents('.codebox').find('.content').toggle('slow'); if (this.value == 'Hide') { this value = 'Details'; } else { this value = 'Hide'; }; return false;"></dt>
+            <dd><div class="content" name="spoiler" style="display: none;text-align:center;"><b>Thursday, June 20th at sunrise through Sunday, June 23rd at midday. Tree Day begins at sunrise on Thursday, June 20th. All dancers, helpers, and visitors to Eagle Sundance this year need to respect Covid protocols! Contact us for more information.</b></div></dd>
         </div>
     </div>
     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><br>
-    <div class="donate-section">
-        <p><b>Our Sundance also welcomes support in the form of money donations. Each year, we rely on the generosity and accountability of our sundancers, helpers, community members, and our extended families to provide enough support to keep the Sundance going. You can donate to the Eagle Sundance fund securely through PayPal via the "Donate" button below. You can donate any amount any time in a single transaction <i>~or~</i> you're given the option to set up your donations on a monthly basis - that way you're able to donate a little each month over the course of our Sundance year. 100% of these collected donations will be used for Sundance related costs and supplies.</b></p>
+    <div style="text-align: left; text-indent: 3%;">
+        <p style="letter-spacing: 0.1em; text-align:left;"><b>Our Sundance also welcomes support in the form of money donations. Each year, we rely on the generosity and accountability of our sundancers, helpers, community members, and our extended families to provide enough support to keep the Sundance going. You can donate to the Eagle Sundance fund securely through PayPal via the "Donate" button below. You can donate any amount any time in a single transaction <i>~or~</i> you're given the option to set up your donations on a monthly basis - that way you're able to donate a little each month over the course of our Sundance year. 100% of these collected donations will be used for Sundance related costs and supplies.</b></p>
     </div>
-    <div class="donate-section">
-        <p><b>This PayPal donation button is intended solely for use by our Eagle Sundance family and its supporters as a way to simplify the process of donating to our Sundance. Miigwech (Thank you) for your support!</b></p>
+    <div style="text-align: left; text-indent: 3%;">
+        <p style="letter-spacing: 0.1em; text-align:left;"><b>This PayPal donation button is intended solely for use by our Eagle Sundance family and its supporters as a way to simplify the process of donating to our Sundance. Miigwech (Thank you) for your support!</b></p>
     </div>
     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><br>
-    <div class="paypal-button-container">
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+    <div>
+        <form style="text-align:center;" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
             <input type="hidden" name="cmd" value="_s-xclick" />
             <input type="hidden" name="hosted_button_id" value="6JVZ2R622QJVS" />
             <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
@@ -580,17 +460,13 @@
         </div>
     </div>
     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><br>
-    <div id="chat-container">
-        <iframe class="chat-container" src="message.php"></iframe>
-    </div>
-    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><br>
-    <footer>
+    <footer style="text-align: left; background-color:white; border:1px solid gray; padding: 1em;">
         <div class="cupojoe">
             <div class="path">
                 <span id="elem" class="shape trail"></span>
             </div>
         </div>
-        <small>© Copyright 2019-Present | Lol and Behold | Gigawaabamin Miinawaa</small>
+        <small style="font-size: 10px">© Copyright 2019-Present | Lol and Behold | Gigawaabamin Miinawaa</small>
     </footer>
     <script src="https://cdn.commoninja.com/sdk/latest/commonninja.js" defer></script>
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
