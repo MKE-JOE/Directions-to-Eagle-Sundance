@@ -583,33 +583,6 @@
 
     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><br>
 
-	    <!---start webstream script--->
-<script>
-        const streamImage = document.getElementById('stream-image');
-        const placeholder = document.getElementById('placeholder');
-        const refreshLink = document.getElementById('refresh-link');
-
-        // Function to show the placeholder and hide the image
-        function showPlaceholder() {
-            streamImage.style.display = 'none';
-            placeholder.style.display = 'block';
-        }
-
-        // Function to refresh the image
-        function refreshStream() {
-            streamImage.src = 'https://baycam.nsbashland.com/mjpg/video.mjpg?timestamp=' + new Date().getTime();
-            streamImage.style.display = 'block';
-            placeholder.style.display = 'none';
-        }
-
-        // Add error event listener to the image
-        streamImage.addEventListener('error', showPlaceholder);
-
-        // Add click event listener to the refresh link
-        refreshLink.addEventListener('click', refreshStream);
-    </script>
-	    <!---end webstream script--->
-
     <!--start rss commoninja script-->
     <script src="https://cdn.commoninja.com/sdk/latest/commonninja.js" defer></script>
     <!--end rss commoninja script-->
