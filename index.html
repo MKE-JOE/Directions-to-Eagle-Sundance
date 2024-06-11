@@ -243,6 +243,24 @@
                 transform: translateX(0%);
             }
         }
+
+        .center-buttons {
+            text-align: center;
+        }
+
+        .center-buttons button,
+        .center-buttons a {
+            margin: 5px;
+        }
+
+        .scroll {
+            border: 3px solid red;
+            padding: 1.25em;
+            margin: 1em;
+            overflow-x: auto;
+            text-align: left;
+            letter-spacing: 0.1em;
+        }
     </style>
 </head>
 <body oncontextmenu="return false">
@@ -282,7 +300,7 @@
         }
     </script>
     <h1 style="text-align: center;">Announcements:</h1>
-    <div class="scroll" style="border: 3px solid red; padding: 1.25em; margin: 1em; overflow-x: auto; text-align:left; letter-spacing: 0.1em;">
+    <div class="scroll">
         <br><br>
         This page has been updated with information for the 2024 Eagle Sundance Ceremony. Further updates to follow as the year progresses. Stay tuned!<br><br>
         <u>Supplies List for 2024 Eagle Sundance</u><br><br>
@@ -298,11 +316,13 @@
             <input style="color:black; background-color:#ECEBEB; border-radius:4px; border-color: gray;" type="submit" value="Get Directions" />
         </form>
     </div>
-    <div>
+    <div class="center-buttons">
         <form>
             <button style="background-color:#ECEBEB; border-radius:4px; padding:2px; color:black; border-color:gray;" formaction="javascript:emailCurrentPage()"><b>Email This Page to a Friend</b></button>
         </form>
-        <a href="sms://?&body=Here's%20a%20link%20to%20our%20Eagle%20Sundance%20page:%0D%0A%0D%0Ahttps://mke-joe.github.io/Directions-to-Eagle-Sundance/"><button style="background-color:#ECEBEB; border-radius:4px; padding:2px; color:black; border-color: gray;" title="SMS" type="button"><b>Text This Page to a Friend</b></button></a>
+        <a href="sms://?&body=Here's%20a%20link%20to%20our%20Eagle%20Sundance%20page:%0D%0A%0D%0Ahttps://mke-joe.github.io/Directions-to-Eagle-Sundance/">
+            <button style="background-color:#ECEBEB; border-radius:4px; padding:2px; color:black; border-color: gray;" title="SMS" type="button"><b>Text This Page to a Friend</b></button>
+        </a>
     </div>
     <script>
         function emailCurrentPage() {
@@ -345,22 +365,22 @@
         </div>
         <div style="margin:20px; margin-top:5px; border: 1px solid #3bbfe7;" class="codebox">
             <dt style="height:66px; text-align: center;"><strong>2nd Sundance Prep Meeting - Saturday, February 24th</strong><br>
-            <input type="button" value="Details" style="width:110px; height:20px; background-color:#ECEBEB; font-size:10px; font-weight:700; margin:0px; padding:0px; border-radius:4px; letter-spacing: 0.1em" onclick="var spoiler = $(this).parents('.codebox').find('.content').toggle('slow'); if (this.value == 'Hide') { this.value = 'Details'; } else { this.value = 'Hide'; }; return false;"></dt>
+            <input type="button" value="Details" style="width:110px; height:20px; background-color:#ECEBEB; font-size:10px; font-weight:700; margin:0px; padding:0px; border-radius:4px; letter-spacing: 0.1em" onclick="var spoiler = $(this).parents('.codebox').find('.content').toggle('slow'); if (this.value == 'Hide') { this value = 'Details'; } else { this value = 'Hide'; }; return false;"></dt>
             <dd><div class="content" name="spoiler" style="display: none;text-align:center;"><b>Saturday, February 24th from 12:00 pm to 11:00 pm. Contact us for more information.</b></div></dd>
         </div>
         <div style="margin:20px; margin-top:5px; border: 1px solid #3bbfe7;" class="codebox">
             <dt style="height:66px; text-align: center;"><strong>3rd Sundance Prep Meeting - Saturday, April 20th</strong><br>
-            <input type="button" value="Details" style="width:110px; height:20px; background-color:#ECEBEB; font-size:10px; font-weight:700; margin:0px; padding:0px; border-radius:4px; letter-spacing: 0.1em" onclick="var spoiler = $(this).parents('.codebox').find('.content').toggle('slow'); if (this.value == 'Hide') { this.value = 'Details'; } else { this.value = 'Hide'; }; return false;"></dt>
+            <input type="button" value="Details" style="width:110px; height:20px; background-color:#ECEBEB; font-size:10px; font-weight:700; margin:0px; padding:0px; border-radius:4px; letter-spacing: 0.1em" onclick="var spoiler = $(this).parents('.codebox').find('.content').toggle('slow'); if (this value == 'Hide') { this value = 'Details'; } else { this value = 'Hide'; }; return false;"></dt>
             <dd><div class="content" name="spoiler" style="display: none;text-align:center;"><b>Saturday, April 20th from 12:00 pm to 10:00 pm. Contact us for more information.</b></div></dd>
         </div>
         <div style="margin:20px; margin-top:5px; border: 1px solid #3bbfe7;" class="codebox">
             <dt style="height:66px; text-align: center;"><strong>Camp Day - Tuesday, June 18th</strong><br>
-            <input type="button" value="Details" style="width:110px; height:20px; background-color:#ECEBEB; font-size:10px; font-weight:700; margin:0px; padding:0px; border-radius:4px; letter-spacing: 0.1em" onclick="var spoiler = $(this).parents('.codebox').find('.content').toggle('slow'); if (this.value == 'Hide') { this.value = 'Details'; } else { this value = 'Hide'; }; return false;"></dt>
+            <input type="button" value="Details" style="width:110px; height:20px; background-color:#ECEBEB; font-size:10px; font-weight:700; margin:0px; padding:0px; border-radius:4px; letter-spacing: 0.1em" onclick="var spoiler = $(this).parents('.codebox').find('.content').toggle('slow'); if (this value == 'Hide') { this value = 'Details'; } else { this value = 'Hide'; }; return false;"></dt>
             <dd><div class="content" name="spoiler" style="display: none;text-align:center;"><b>Tuesday, June 18th at 12:00 pm. All attending dancers and helpers are expected to be on the Sundance grounds on Camp Day to stay for the duration of the Sundance week. All dancers, helpers, and visitors to Eagle Sundance this year need to respect Covid protocols! Contact us for more information.</b></div></dd>
         </div>
         <div style="margin:20px; margin-top:5px; border: 1px solid #3bbfe7;" class="codebox">
             <dt style="height:66px; text-align: center;"><strong>Sundance Ceremony - Thursday, June 20th - Sunday, June 23rd</strong><br>
-            <input type="button" value="Details" style="width:110px; height:20px; background-color:#ECEBEB; font-size:10px; font-weight:700; margin:0px; padding:0px; border-radius:4px; letter-spacing: 0.1em" onclick="var spoiler = $(this).parents('.codebox').find('.content').toggle('slow'); if (this.value == 'Hide') { this value = 'Details'; } else { this value = 'Hide'; }; return false;"></dt>
+            <input type="button" value="Details" style="width:110px; height:20px; background-color:#ECEBEB; font-size:10px; font-weight:700; margin:0px; padding:0px; border-radius:4px; letter-spacing: 0.1em" onclick="var spoiler = $(this).parents('.codebox').find('.content').toggle('slow'); if (this value == 'Hide') { this value = 'Details'; } else { this value = 'Hide'; }; return false;"></dt>
             <dd><div class="content" name="spoiler" style="display: none;text-align:center;"><b>Thursday, June 20th at sunrise through Sunday, June 23rd at midday. Tree Day begins at sunrise on Thursday, June 20th. All dancers, helpers, and visitors to Eagle Sundance this year need to respect Covid protocols! Contact us for more information.</b></div></dd>
         </div>
     </div>
