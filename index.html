@@ -254,6 +254,9 @@
             margin-left: 5px;
 	    font-size: 75%;
         }
+	    .rss-item {
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 
@@ -652,6 +655,33 @@
         <iframe style="width: 100%; height: 100%; border: none;" src="feed.html"></iframe>
     </div>
     <!---Message Board ends--->
+	
+<!---webhook-rss-feed-starts--->
+	<h1>RSS Feed</h1>
+    <div id="rss-feed"></div>
+
+    <script>
+        // Fetch the RSS feed data
+        fetch('rss_data.json')
+            .then(response => response.json())
+            .then(data => {
+                const rssFeed = document.getElementById('rss-feed');
+                data.forEach(item => {
+                    const rssItem = document.createElement('div');
+                    rssItem.classList.add('rss-item');
+                    rssItem.innerHTML = `
+                        <h2>${item.title}</h2>
+                        <p>${item.description}</p>
+                        <a href="${item.link}" target="_blank">Read more</a>
+                        <p><small>${new Date(item.pubDate).toLocaleString()}</small></p>
+                    `;
+                    rssFeed.appendChild(rssItem);
+                });
+            })
+            .catch(error => console.error('Error fetching RSS feed:', error));
+    </script>
+
+<!---webhook-rss-feed-ends--->
 
     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><br><br>
 </body>
