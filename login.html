@@ -3298,21 +3298,21 @@ animation-delay: 2s;
 	      
 	    
     <script>
-        function allowDrop(ev)
-        {
-            ev.preventDefault();
-        }
+    function allowDrop(ev)
+    {
+        ev.preventDefault();
+    }
 
-        function drag(ev)
-        {
-            ev.dataTransfer.setData("Url","https://mke-joe.github.io/Directions-to-Eagle-Sundance/");
-        }
+    function drag(ev)
+    {
+        ev.dataTransfer.setData("Url","https://mke-joe.github.io/Directions-to-Eagle-Sundance/");
+    }
 
-        function drop(ev)
-        {
-            ev.preventDefault();
-            window.location=ev.dataTransfer.getData("Url");
-        }
+    function drop(ev)
+    {
+        ev.preventDefault();
+        window.location.replace(ev.dataTransfer.getData("Url"));
+    }
     </script>
     </head>
 	
