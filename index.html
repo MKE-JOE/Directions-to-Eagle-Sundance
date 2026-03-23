@@ -267,28 +267,36 @@
     <p style="letter-spacing: 0.1em; font-weight:normal; text-align:left; color:red; border:3px solid; border-color:#FF0000; padding: 1em;font-size:14px; text-indent: 3%;">This page is not intended to be shared on a public forum! Please DO NOT share this page on Facebook or any other social media platform. This page was created out of necessity as a general resource to help our Sundance family stay up to date on Eagle Sundance events. If you should see this page posted on <i>any</i> public social media platform, please ask for it to be removed immediately and contact us as soon as possible. Miigwech, thank you for honoring this request. If you are a member of our Sundance community, feel free to share this page respectfully with your friends and relatives in a good way.</p><br> 
 
     <div style="text-align: center;">	
-        <button type="button" class="btn btn-default btn-xs" style="background-color:#ECEBEB; border-radius:4px; color:black; border-color:gray;" onclick="toggle(!document.body.classList.contains('dark-mode'));">
-    🌓 Toggle Light/Dark Mode
-        </button>
-        <input type="checkbox" onchange="toggle(this.checked);" id="darkModeIndicator"/>
-        <div>
-            <small style="font-size:10px;">(Check box to choose 'Dark Mode' as default setting)</small>
-        </div>
+    <button type="button" class="btn btn-default btn-xs" style="background-color:#ECEBEB; border-radius:4px; color:black; border-color:gray;" onclick="toggleDarkModeTemporarily();">
+        🌓 Toggle Light/Dark Mode
+    </button>
+    <input type="checkbox" onchange="setDarkModeDefault(this.checked);" id="darkModeIndicator"/>
+    <div>
+        <small style="font-size:10px;">(Check box to choose 'Dark Mode' as default setting)</small>
     </div>
+</div>
 
     <script>
-        function toggle(darkmode) {
-            darkmode === 'true' || darkmode === true
-                ? document.body.classList.add('dark-mode')
-                : document.body.classList.remove('dark-mode');
-
-            window.localStorage.setItem('toggle', darkmode);
+    function applyDarkMode(isDark) {
+        if (isDark) {
+            document.body.classList.add('dark-mode');
+        } else {
+            document.body.classList.remove('dark-mode');
         }
+    }
 
-        toggle(window.localStorage.getItem('toggle'));
+    function setDarkModeDefault(isDarkDefault) {
+        window.localStorage.setItem('darkModeDefault', isDarkDefault ? 'true' : 'false');
+    }
 
-        document.getElementById('darkModeIndicator').checked = window.localStorage.getItem('toggle') === 'true';
-    </script>
+    function toggleDarkModeTemporarily() {
+        document.body.classList.toggle('dark-mode');
+    }
+
+    const savedDarkModeDefault = window.localStorage.getItem('darkModeDefault') === 'true';
+    applyDarkMode(savedDarkModeDefault);
+    document.getElementById('darkModeIndicator').checked = savedDarkModeDefault;
+</script>
 
 	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
