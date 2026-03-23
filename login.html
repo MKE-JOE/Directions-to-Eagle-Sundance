@@ -3298,32 +3298,33 @@ animation-delay: 2s;
 	      
 	    
     <script>
-    function allowDrop(ev)
-    {
-        ev.preventDefault();
-    }
+        function allowDrop(ev)
+        {
+            ev.preventDefault();
+        }
 
-    function drag(ev)
-    {
-        ev.dataTransfer.setData("Url","https://mke-joe.github.io/Directions-to-Eagle-Sundance/");
-    }
+        function drag(ev)
+        {
+            ev.dataTransfer.setData("Url","https://mke-joe.github.io/Directions-to-Eagle-Sundance/");
+        }
 
-    function drop(ev)
-    {
-        ev.preventDefault();
-        window.location.replace(ev.dataTransfer.getData("Url"));
-    }
+        function drop(ev)
+        {
+            ev.preventDefault();
+            window.location=ev.dataTransfer.getData("Url");
+        }
     </script>
     </head>
-
-<body>
-
-<header>
-<div style="text-align: center;">
-    <audio id="audio" src="thunder-rumble.mp3"></audio>
-    <img id="img" src="login-button.png" width="300" height="60" style="padding: 20px;">
-</div>
-</header>
+	
+	<header>
+	<div style="text-align: center;">
+		<audio id="audio" src="thunder-rumble.mp3"></audio>
+<img id="img" src="login-button.png" width=300 height=60 style="padding: 20px;">
+</center>
+		</div>
+	</header>
+	
+    <body>
 	    
 	    
 	    
@@ -3351,9 +3352,7 @@ animation-delay: 2s;
 		    
         <div id="div1">
          <img src="https://raw.githubusercontent.com/MKE-JOE/Directions-to-Eagle-Sundance/master/tobacco-twist3.png" draggable="true" ondragstart="drag(event)" id="drag1" style="width:17vw; min-width:200px;"></div>
-        <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
-    <img src="https://raw.githubusercontent.com/MKE-JOE/Directions-to-Eagle-Sundance/master/hand2.png" style="width:27vw; min-width:200px;">
-</div>
+        <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"><img src="https://raw.githubusercontent.com/MKE-JOE/Directions-to-Eagle-Sundance/master/hand2.png" style="width:27vw; min-width:200px;""></div>
 	 
 
 <!-- two layers of Image-->
@@ -3367,11 +3366,12 @@ document.getElementById("img").addEventListener("click", function(){
 </script>
 		
 		
-		<script>
-    const expires = new Date();
-    expires.setDate(expires.getDate() + 4);
-    document.cookie = "wf_auth_page=1; expires=" + expires.toUTCString() + "; path=/";
-        </script>
+		<script src="DragDropTouch.js"></script>
+		
+		<script src="https://cdn.jsdelivr.net/npm/js-cookie@beta/dist/js.cookie.min.js"></script>
+		<script type="text/javascript">
+		Cookies.set('wf_auth_page', '1', { expires: 4 })
+		</script>
 		
 		<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
